@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'Outfit';
+  src: url(/assets/fonts/outfit/Outfit-VariableFont_wght.ttf); 
+}
+@font-face {
+  font-family: 'Young-serif';
+  src: url(/assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+
+
+body{
+  background-color: #f3e5d8;
+  font-family: 'Outfit';
+  font-weight: 400;
+}
+.mainContainer{
+  background-color: white;
+  width: 40%;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+.Omelette{
+  border-radius: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.preparationTime{
+  background-color: rgba(253, 244, 250, 1);
+  padding: 4px;
+  padding-left: 10px;
+  border-radius: 20px;
+  width: 100%;
+}
+.Title{
+  color: rgb(98, 50, 72);
+  font-family: 'Young-serif';
+  font-size: x-large;
+  font-weight: 550;
+}
+.Maintitle{
+  font-size: 50px;
+  font-family: 'Young-serif';
+  font-weight: 400;
+}
+.recipeDisc{
+  font-size: large;
+  font-family: 'Outfit';
+}
+.ingredients{
+  font-size: large;
+}
+.Instructions{
+  font-size: large;
+}
+.largeFont{
+  font-size: large;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+td:first-child {
+  color: #555; 
+}
+
+.strongER {
+  color: #a33; /
+}
+.ServeAmount{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: large;
+  font-family: 'Outfit';
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+.subcribepls{
+  font-size: large;
+  font-family: 'Outfit';
+  margin-top: 10px;
+}
+.plssubcrible{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: medium;
+  font-family: 'Outfit';
+  border-radius: 50px;
+}
+.submitbtn{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: medium;
+  font-family: 'Outfit';
+  border-radius: 50px;
+  background-color: white;
+}
+@media only screen and (max-width: 600px) {
+  .mainContainer{
+    width: 90%;
+  }
+}

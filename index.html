@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="Style/stylesheet.css">
+  <title>Recipe page</title>
+  <script>
+    window.onload = function() {
+      document.getElementById('ServeAmount').addEventListener('change', updateIngredients);
+    };
+  
+    function updateIngredients() {
+  const multiplier = {
+    Normal: 1,
+    Double: 2,
+    Triple: 3,
+    Quadruple: 4
+  };
+
+  const serveAmount = document.getElementById('ServeAmount').value;
+  const factor = multiplier[serveAmount];
+
+  // Helper function to format fractions
+  function formatFraction(value) {
+    if (value === 1 / 3) return "1/3";
+    if (value === 2 / 3) return "2/3";
+    if (value === 4 / 3) return "4/3";
+  }
+
+  // Updated ingredient quantities
+  const ingredients = [
+    `${2 * factor} cups all-purpose flour`,
+    `${1 * factor} teaspoon salt`,
+    `${4 * factor} teaspoons baking powder`,
+    `${2 * factor} tablespoons white sugar`,
+    `${2 * factor} large eggs`,
+    `${1.5 * factor} cups warm milk`,
+    `${formatFraction((1 / 3) * factor)} cup butter, melted`,
+    `${1 * factor} teaspoon vanilla extract`,
+    `Optional Dressing: Nutella, Caramel, Chocolate Sauce, Powdered Sugar, Maple Syrup`
+  ];
+
+  // Update the ingredient list
+  const ingredientList = document.querySelector('.ingredients');
+  ingredientList.innerHTML = ingredients.map(ingredient => `<li>${ingredient}</li>`).join('');
+}
+  </script>
+</head>
+<body>
+<div class="mainContainer">
+  <img src="assets/images/istockphoto-185266029-612x612.jpg" alt="This Image is a waffle" class="Omelette"><br>
+ <h1 class="Maintitle">Simple Waffle Recipe</h1>
+
+  <p class="recipeDisc"> An easy and quick dish, 
+    perfect for any meal. This classic waffle recipe 
+    combines a light and fluffy batter, 
+    cooked to golden perfection in a waffle maker. 
+    Optionally, top with your choice of syrup, fresh fruits, 
+    whipped cream, or even savory options like fried chicken or 
+    cheese. 
+  </p>
+
+<div class="preparationTime"> 
+  <h2 class="Title">Preparation time </h2>
+  <ul>
+    <li> <strong> Approximately: </strong> 25 minutes </li>
+    <li> <strong> Preparation:</strong> 10 minutes  </li>
+    <li> <strong> Cooking:</strong> 15 minutes  </li> 
+  </ul>
+</div>
+
+ <h1 class="Title"> Ingredients </h1>
+ <select name="ServeAmount" id="ServeAmount" class="ServeAmount">
+  <option value="Normal">Normal</option>
+  <option value="Double">Double</option>
+  <option value="Triple">Triple</option>
+  <option value="Quadruple">Quadruple</option>
+</select>
+<ul class="ingredients">
+ <li> 2 cups all-purpose flour </li>
+ <li> 1 teaspoon salt </li> 
+ <li> 4 teaspoons baking powder </li>
+ <li> 2 tablespoons white sugar </li>
+ <li> 2 large eggs </li>
+ <li> 1 ½ cups warm milk </li>
+ <li> ⅓ cup butter, melted </li>
+ <li> 1 teaspoon vanilla extract </li>
+ <li> Optional Dressing: Nutella, Caramel, Chocolate Sauce, Poudered Sugar, Maple Syrup </li>
+</ul>  <hr>
+ <h1 class="Title"> Instructions </h1>
+ <ol class="Instructions">
+
+ <li> <strong>Gather all ingredients.</strong>: Gather all of the flour, salt, baking powder
+sugar, eggs, milk, butter and the vanilla for easy access </li> 
+
+  <li> <strong>Dry ingredients</strong>: Mix flour, salt, baking powder, and sugar together in a large bowl; set aside.  </li> 
+
+  <li> <strong>Preheat</strong>: Preheat your waffle iron to desired temperature, make sure to coat in a layer of oil 
+  or melted butter </li> 
+
+  <li><strong> Wet ingredients</strong>: Beat eggs in a separate bowl; stir in milk, butter, and vanilla. </li> 
+
+  <li> <strong>Mix them</strong>: Pour milk mixture into flour mixture; beat until blended. </li> 
+
+  <li><strong>Pour</strong>: Pour your mixture into your preheated waffle iron. </li>
+  
+  <li><strong>Cook</strong>: Cook waffles until golden and crisp. </li> 
+  
+  <li><strong>Enjoy</strong>: Serve immediately and enjoy! </li>  
+</ol>
+<hr>
+ <h1 class="Title"> Nutrition </h1>
+
+  <p class="largeFont">  &nbsp;  &nbsp;The table below shows nutritional values per serving without the additional dressings.</p>
+  <table> 
+  <tr>
+    <td>Calories</td>
+    <td><strong class="strongER">379kcal </strong></td>
+  </tr> 
+
+  <tr>
+    <td>Carbs</td>
+    <td> <strong class="strongER"> 48g </strong></td>
+  </tr>
+
+  <tr> 
+  <td>Protein</td>
+  <td><strong class="strongER">10g </strong></td>
+  </tr>
+
+  <tr> 
+    <td>Fat</td> 
+    <td> <strong class="strongER">16g </strong></td>
+  </tr>
+</table>
+  <div class="subcribepls">Want to Subscripe to this page <input placeholder="Enter your email" class="plssubcrible"> <input class="submitbtn" type="submit"></div> 
+</div>
+</body>
+</html>
